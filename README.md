@@ -1,7 +1,9 @@
 # Heart Attacks in India — A Statistical Study
 
+Course project in statistics, Bocconi University (January 2025) — **Benedicta Scarongella** and **Antonio Troiano**. Full write-up: [`report/StatisticProject.pdf`](report/StatisticProject.pdf).
+
 This project investigates the rising incidence of **heart attacks among young adults in India** (ages 18–35) through a statistical analysis of demographic, lifestyle, medical, and clinical factors.  
-The study aims to understand whether modifications in **lifestyle and behavior** can mitigate cardiovascular risks and help explain the alarming trend observed in recent years .
+The study aims to understand whether modifications in **lifestyle and behavior** can mitigate cardiovascular risks and help explain the alarming trend observed in recent years.
 
 ---
 
@@ -26,5 +28,20 @@ The study aims to understand whether modifications in **lifestyle and behavior**
   - Moderate physical activity combined with gender/diet.
   - Diabetes and hypertension interactions with chest pain type.
 - Some predictors act as **protective factors** (e.g., moderate exercise, certain dietary habits).  
-- Public health initiatives should **promote positive lifestyle interventions** to reduce risk.  
+- Public health initiatives should **promote positive lifestyle interventions** to reduce risk.
+
+---
+
+## 📂 Repository structure
+
+```
+.
+├── code/code.R                # Full analysis: EDA, logistic regression, interactions, LASSO, model comparison
+├── data/data.csv              # Kaggle dataset (MIT licence), semicolon-separated
+└── report/StatisticProject.pdf
+```
+
+## ▶️ Reproducing the analysis
+
+Open `code/code.R` in R or RStudio with the working directory set to the repository root and run it top to bottom. The script loads `data/data.csv` directly and installs the two extra packages it needs (`lmtest`, `glmnet`) if they are missing.
 

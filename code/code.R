@@ -1,5 +1,6 @@
 #Import the CSV file in R 
-data_set=read.csv(file.choose(), header=TRUE, sep=";")
+# Run from the repository root (in RStudio: Session > Set Working Directory)
+data_set=read.csv("data/data.csv", header=TRUE, sep=";")
 attach(data_set)
 View(data_set) #to visualize the data
 summary(data_set)
@@ -256,7 +257,7 @@ barplot(table13, beside=TRUE, col=c("pink", "lightblue", "lavender", "lightgreen
 
 
 #Likelihood Ratio Test
-install.packages("lmtest")
+if (!requireNamespace("lmtest", quietly=TRUE)) install.packages("lmtest")
 library(lmtest)
 reduced_model = glm(HeartAttack2 ~ 1, data=data_set, family=binomial)
 
@@ -340,7 +341,7 @@ summary(full_model)
 
 
 #LASSO penalization 
-install.packages("glmnet")
+if (!requireNamespace("glmnet", quietly=TRUE)) install.packages("glmnet")
 library(glmnet)
 
 formula = HeartAttack2 ~ Gender + Diet + PhysicalA + Age + 
