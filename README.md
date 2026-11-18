@@ -47,3 +47,4 @@ The likelihood-ratio test gives p = 0.98: the 44 extra parameters of the full mo
 ## Reproducing the analysis
 
 Open `code/code.R` in R or RStudio with the working directory set to the repository root and run it from top to bottom. The script reads `data/data.csv` directly and installs the two additional packages it needs (`lmtest` and `glmnet`) if they are missing.
+
